@@ -2,6 +2,6 @@
 
 ## Авторы
 
-- Aleksey Lovchikov - _Начальная работа_ - [ВашGithub](https://github.com/alekseylovchikov)
+- Aleksey Lovchikov - [alekseylovchikov](https://github.com/alekseylovchikov)
 
 ## to be cointinued ...
