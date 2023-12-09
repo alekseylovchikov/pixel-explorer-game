@@ -1,10 +1,10 @@
-const keys = {};
+const keys: Record<string, boolean> = {};
 
-function keydown(event) {
+function keydown(event: KeyboardEvent) {
   keys[event.code] = true;
 }
 
-function keyup(event) {
+function keyup(event: KeyboardEvent) {
   keys[event.code] = false;
 }
 

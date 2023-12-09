@@ -1,6 +1,6 @@
-import { app } from 'src/app/init';
+import { app, PIXI } from 'src/app/init';
 
-const setPosition = (gameObject) => {
+const setPosition = (gameObject: PIXI.Sprite) => {
   gameObject.anchor.set(0.5);
 
   gameObject.x = app.screen.width / 2;

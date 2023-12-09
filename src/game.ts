@@ -5,7 +5,7 @@ import keys from 'src/input-system';
 import constants from 'src/settings/constants';
 import 'src/styles/index.css';
 
-function isColliding(sprite1, sprite2) {
+function isColliding(sprite1: PIXI.Sprite, sprite2: PIXI.Sprite) {
   const bounds1 = sprite1.getBounds();
   const bounds2 = sprite2.getBounds();
 
@@ -39,4 +39,4 @@ app.ticker.add(() => {
   });
 });
 
-document.body.appendChild(app.view);
+document.body.appendChild(app.view as HTMLCanvasElement);

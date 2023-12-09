@@ -1,12 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  entry: './src/game.js',
+  entry: './src/game.ts',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
@@ -24,6 +23,7 @@ module.exports = {
     alias: {
       src: path.resolve(__dirname, 'src/'),
     },
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [
@@ -43,6 +43,11 @@ module.exports = {
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
         ],
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
     ],
   },
