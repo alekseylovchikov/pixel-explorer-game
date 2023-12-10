@@ -5,6 +5,19 @@ import keys from 'src/input-system';
 import constants from 'src/settings/constants';
 import 'src/styles/index.css';
 
+import * as stylex from '@stylexjs/stylex';
+
+const styles = stylex.create({
+	base: {
+		fontSize: 16,
+		lineHeight: 1.5,
+		color: 'rgb(60,60,60)',
+	},
+	highlighted: {
+		color: 'rebeccapurple',
+	},
+});
+
 function isColliding(sprite1: PIXI.Sprite, sprite2: PIXI.Sprite) {
 	const bounds1 = sprite1.getBounds();
 	const bounds2 = sprite2.getBounds();
