@@ -1,11 +1,11 @@
 const keys: Record<string, boolean> = {};
 
 function keydown(event: KeyboardEvent) {
-  keys[event.code] = true;
+	keys[event.code] = true;
 }
 
 function keyup(event: KeyboardEvent) {
-  keys[event.code] = false;
+	keys[event.code] = false;
 }
 
 window.addEventListener('keydown', keydown);
